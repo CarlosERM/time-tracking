@@ -1,0 +1,137 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  /*PRIMARY*/
+  --blue: hsl(246, 80%, 60%);
+
+  --light-red: hsl(15, 100%, 70%); /* (work) */
+  --soft-blue: hsl(195, 74%, 62%); /*(play)*/
+  --light-red-pink: hsl(348, 100%, 68%); /*(study)*/
+  --lime-green: hsl(145, 58%, 55%); /*(exercise)*/
+  --violet: hsl(264, 64%, 52%); /*(social) */
+  --soft-orange: hsl(43, 84%, 65%); /*(self care)*/
+
+  /*NEUTRAL*/
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+body {
+  /* font-size: 18px; card titles size */
+  font-family: "Rubik", sans-serif;
+  color: white;
+  background-color: var(--very-dark-blue);
+}
+.box {
+  display: grid;
+  margin: 5rem 1.4375rem;
+  gap: 1.5rem;
+}
+
+.main__profile {
+  border-radius: 1rem;
+  background-color: var(--blue);
+  display: flex;
+  padding: 1.875rem;
+  gap: 1.125rem;
+}
+
+.profile__pic {
+  height: 4.375rem;
+  border: 0.1875rem solid white;
+  border-radius: 50%;
+}
+.profile__name {
+  align-self: center;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 0.4375rem;
+}
+.profile__name span {
+  font-size: 0.9375rem;
+  color: var(--pale-blue);
+}
+main {
+  background: var(--dark-blue);
+  border-radius: 1rem;
+}
+.profile-list {
+  font-size: 18px;
+  display: flex;
+  gap: 3.75rem;
+  justify-content: center;
+  margin-top: 1.625rem;
+  margin-bottom: 1.625rem;
+  color: var(--desaturated-blue);
+}
+.profile-list li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* CARDS */
+section {
+  border-radius: 1rem;
+}
+.card {
+  border-radius: 1rem;
+  margin-top: 2.375rem;
+  background-color: var(--dark-blue);
+  padding: 1.875rem 1.5rem;
+}
+
+.work {
+  background: url("../images/icon-work.svg"), var(--light-red);
+  background-repeat: no-repeat;
+  background-position: top -0.625rem right 1.125rem;
+  background-size: 4.9rem;
+}
+.play {
+  background: url("../images/icon-play.svg"), var(--soft-blue);
+  background-repeat: no-repeat;
+  background-position: top -0.625rem right 1.125rem;
+  background-size: 4.9rem;
+}
+.study {
+  background: url("../images/icon-study.svg"), var(--light-red-pink);
+  background-repeat: no-repeat;
+  background-position: top -0.625rem right 1.125rem;
+  background-size: 4.9rem;
+}
+.exercise {
+  background: url("../images/icon-exercise.svg"), var(--lime-green);
+  background-repeat: no-repeat;
+  background-position: top -0.625rem right 1.125rem;
+  background-size: 4.9rem;
+}
+.social {
+  background: url("../images/icon-social.svg"), var(--violet);
+  background-repeat: no-repeat;
+  background-position: top -0.625rem right 1.125rem;
+  background-size: 4.9rem;
+}
+.selfcare {
+  background: url("../images/icon-self-care.svg"), var(--soft-orange);
+  background-repeat: no-repeat;
+  background-position: top -0.625rem right 1.125rem;
+  background-size: 4.9rem;
+}
