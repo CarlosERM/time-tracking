@@ -39,6 +39,11 @@ body {
   color: white;
   background-color: var(--very-dark-blue);
 }
+h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
 .box {
   display: grid;
   margin: 5rem 1.4375rem;
@@ -66,6 +71,10 @@ h1 {
   font-weight: 300;
   margin-top: 0.4375rem;
 }
+h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
 .profile__name span {
   font-size: 0.9375rem;
   color: var(--pale-blue);
@@ -74,7 +83,7 @@ main {
   background: var(--dark-blue);
   border-radius: 1rem;
 }
-.profile-list {
+.profile--list {
   font-size: 18px;
   display: flex;
   gap: 3.75rem;
@@ -83,20 +92,45 @@ main {
   margin-bottom: 1.625rem;
   color: var(--desaturated-blue);
 }
-.profile-list li:hover {
+.profile--list li:hover {
   color: white;
   cursor: pointer;
+}
+.active {
+  color: white;
 }
 
 /* CARDS */
 section {
   border-radius: 1rem;
 }
+
 .card {
   border-radius: 1rem;
   margin-top: 2.375rem;
   background-color: var(--dark-blue);
   padding: 1.875rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.previous {
+  align-self: flex-end;
+  color: var(--pale-blue);
+  font-size: 15px;
+  margin-bottom: 9px;
+}
+.previous:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--pale-blue);
+  box-shadow: 0px 8px 0px var(--pale-blue), 0px 16px 0px var(--pale-blue);
+  transform: rotate(90deg);
+  top: 36px;
+  right: 24px;
 }
 
 .work {
