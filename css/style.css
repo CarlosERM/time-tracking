@@ -132,13 +132,21 @@ section {
   top: 36px;
   right: 24px;
 }
-
+.stupid {
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  cursor: pointer;
+  top: 36px;
+  right: 24px;
+}
 .work {
   background: url("../images/icon-work.svg"), var(--light-red);
   background-repeat: no-repeat;
   background-position: top -0.625rem right 1.125rem;
   background-size: 4.9rem;
 }
+
 .play {
   background: url("../images/icon-play.svg"), var(--soft-blue);
   background-repeat: no-repeat;
