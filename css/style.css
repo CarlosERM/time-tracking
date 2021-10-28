@@ -33,21 +33,25 @@ html {
 *:before {
   box-sizing: inherit;
 }
+
 body {
-  /* font-size: 18px; card titles size */
   font-family: "Rubik", sans-serif;
   color: white;
   background-color: var(--very-dark-blue);
 }
+
 h2 {
   font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: 10px;
 }
+
 .box {
   display: grid;
   margin: 5rem 1.4375rem;
   gap: 1.5rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 }
 
 .main__profile {
@@ -63,26 +67,32 @@ h2 {
   border: 0.1875rem solid white;
   border-radius: 50%;
 }
+
 .profile__name {
   align-self: center;
 }
+
 h1 {
   font-size: 1.5rem;
   font-weight: 300;
   margin-top: 0.4375rem;
 }
+
 h3 {
   font-size: 2rem;
   font-weight: 300;
 }
+
 .profile__name span {
   font-size: 0.9375rem;
   color: var(--pale-blue);
 }
+
 main {
   background: var(--dark-blue);
   border-radius: 1rem;
 }
+
 .profile--list {
   font-size: 18px;
   display: flex;
@@ -92,10 +102,12 @@ main {
   margin-bottom: 1.625rem;
   color: var(--desaturated-blue);
 }
+
 .profile--list li:hover {
   color: white;
   cursor: pointer;
 }
+
 .active {
   color: white;
 }
@@ -114,12 +126,14 @@ section {
   justify-content: space-between;
   position: relative;
 }
+
 .previous {
   align-self: flex-end;
   color: var(--pale-blue);
   font-size: 15px;
   margin-bottom: 9px;
 }
+
 .previous:before {
   content: "";
   position: absolute;
@@ -132,6 +146,7 @@ section {
   top: 36px;
   right: 24px;
 }
+
 .stupid {
   position: absolute;
   width: 20px;
@@ -140,6 +155,7 @@ section {
   top: 36px;
   right: 24px;
 }
+
 .work {
   background: url("../images/icon-work.svg"), var(--light-red);
   background-repeat: no-repeat;
@@ -153,27 +169,69 @@ section {
   background-position: top -0.625rem right 1.125rem;
   background-size: 4.9rem;
 }
+
 .study {
   background: url("../images/icon-study.svg"), var(--light-red-pink);
   background-repeat: no-repeat;
   background-position: top -0.625rem right 1.125rem;
   background-size: 4.9rem;
 }
+
 .exercise {
   background: url("../images/icon-exercise.svg"), var(--lime-green);
   background-repeat: no-repeat;
   background-position: top -0.625rem right 1.125rem;
   background-size: 4.9rem;
 }
+
 .social {
   background: url("../images/icon-social.svg"), var(--violet);
   background-repeat: no-repeat;
   background-position: top -0.625rem right 1.125rem;
   background-size: 4.9rem;
 }
+
 .selfcare {
   background: url("../images/icon-self-care.svg"), var(--soft-orange);
   background-repeat: no-repeat;
   background-position: top -0.625rem right 1.125rem;
   background-size: 4.9rem;
 }
+
+@media all and (min-width: 42.375rem) {
+  main {
+    grid-column: 1/3;
+  }
+}
+@media all and (min-width: 62.875rem) {
+  h3 {
+    font-size: 3rem;
+  }
+  main {
+    grid-column: 1/4;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .box {
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    grid-auto-rows: 15.9375rem;
+    /* max-height: 32.5rem;
+    max-width: 69.4375rem; */
+  }
+  .card {
+    flex-direction: column;
+    height: 85%;
+  }
+  .previous {
+    align-self: flex-start;
+  }
+}
+/* 
+@media all and (min-width: 69.875rem) {
+  main {
+    grid-row: 1/4;
+    grid-column: 1;
+  }
+} */
