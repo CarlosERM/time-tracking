@@ -1,5 +1,5 @@
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
 }
 .attribution a {
@@ -43,7 +43,7 @@ body {
 h2 {
   font-size: 1.125rem;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .box {
@@ -130,30 +130,30 @@ section {
 .previous {
   align-self: flex-end;
   color: var(--pale-blue);
-  font-size: 15px;
-  margin-bottom: 9px;
+  font-size: 0.9375rem;
+  margin-bottom: 0.5625rem;
 }
 
 .previous:before {
   content: "";
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 0.3125rem;
+  height: 0.3125rem;
   border-radius: 50%;
   background-color: var(--pale-blue);
-  box-shadow: 0px 8px 0px var(--pale-blue), 0px 16px 0px var(--pale-blue);
+  box-shadow: 0px 0.5rem 0px var(--pale-blue), 0px 1rem 0px var(--pale-blue);
   transform: rotate(90deg);
-  top: 36px;
-  right: 24px;
+  top: 2.25rem;
+  right: 1.5rem;
 }
 
 .stupid {
   position: absolute;
-  width: 20px;
-  height: 5px;
+  width: 1.25rem;
+  height: 0.3125rem;
   cursor: pointer;
-  top: 36px;
-  right: 24px;
+  top: 2.25rem;
+  right: 1.5rem;
 }
 
 .work {
@@ -204,34 +204,107 @@ section {
   }
 }
 @media all and (min-width: 62.875rem) {
-  h3 {
-    font-size: 3rem;
-  }
   main {
     grid-column: 1/4;
   }
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+@media all and (min-width: 68.75rem) {
   body {
     display: flex;
     justify-content: center;
+    min-height: 100vh;
+  }
+  h1 {
+    font-size: 2.5rem;
+    line-height: 2.9rem;
+    font-weight: 300;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  h3 {
+    font-size: 3.45rem;
+    margin-bottom: 1rem;
   }
   .box {
-    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
-    grid-auto-rows: 15.9375rem;
-    /* max-height: 32.5rem;
-    max-width: 69.4375rem; */
+    margin: 0;
+    grid-template-columns: repeat(4, 15.9375rem);
+    grid-template-rows: 15.1875rem 15.1875rem;
+    grid-template-areas:
+      "profile work     play    study"
+      "profile exercise social  selfcare";
+    align-self: center;
+    gap: 1.875rem;
+  }
+  main {
+    grid-area: profile;
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+  .main__profile {
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    padding-bottom: 5.1rem;
+    gap: 2.5625rem;
+  }
+  .profile__pic {
+    height: 5.3125rem;
+  }
+
+  .profile--list {
+    padding-top: 0.0625rem;
+    flex-direction: column;
+    padding-left: 2rem;
+    gap: 1.5rem;
+  }
+  .previous:before {
+    top: 2.25rem;
+    right: 1.875rem;
+    width: 0.3125rem;
+    height: 0.3125rem;
+  }
+  .stupid {
+    top: 2.25rem;
+    right: 1.875rem;
+    width: 0.3125rem;
+    height: 0.3125rem;
+  }
+  .work {
+    grid-area: work;
+  }
+  .play {
+    grid-area: play;
+    background-position: top -0.3rem right 1.3rem;
+  }
+  .study {
+    grid-area: study;
+    background-position: top -0.5rem right 1.125rem;
+  }
+  .exercise {
+    grid-area: exercise;
+    background-position: top 0rem right 1.125rem;
+  }
+  .social {
+    grid-area: social;
+    background-position: top -0.1rem right 0.8rem;
+  }
+  .selfcare {
+    grid-area: selfcare;
+    background-position: top -0.625rem right 1rem;
+    background-size: 4.1rem;
   }
   .card {
     flex-direction: column;
-    height: 85%;
+    height: 82%;
+    margin-top: 2.8125rem;
+    padding: 1.875rem 1.9rem;
   }
   .previous {
     align-self: flex-start;
   }
 }
-/* 
-@media all and (min-width: 69.875rem) {
-  main {
-    grid-row: 1/4;
-    grid-column: 1;
-  }
-} */
